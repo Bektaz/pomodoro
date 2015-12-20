@@ -1,0 +1,48 @@
+<!DOCTYPE>
+
+<html>
+	<head>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="pomodorocss.css">
+	</head>
+    <body>
+        <div class='main'>
+          <!--3 elements on the screen-->
+          <img id = 'pomimg' src='http://s7.postimg.org/4cxudzg0r/pomodoro.png'>  
+          <div id='controldiv'> 
+            <div id='innercontroldiv'>
+                <div class='worklengthdiv'>  
+                  <p style='text-align:center'>Work length</p> 
+                  <button class='updown' onclick='up()'><font>+</font></button>
+                  <font id='wl'></font>
+                  <button class='updown' onclick='down()'><font>-</font></button>
+                </div>  
+                <div class='breaklengthdiv'>  
+                  <p style='text-align:center'>Break length</p>
+                  <button class='updown' onclick='bup()'><font>+</font></button>
+                  <font id='bl'></font>
+                  <button class='updown down' onclick='bdown()'><font>-</font></button>
+                </div>   
+                <div class='togglediv'>  
+                   <button class='updown' onclick='toggle()'><img src='http://s22.postimg.org/69940as19/play_pause_32x32.png'></button>
+                </div> 
+            </div>  
+          </div> 
+          <div id='wrapclockdiv'>  
+            <div id='outercirclediv'>
+            <div id='innercirclediv'>
+              <div class='divforinsidetext'>
+                <p id='demo'></p>
+              </div>
+              <div id='idforgifs'>
+              </div>
+            </div>
+          </div> 
+            <canvas id="myCanvas" width="350" height="350">
+          </div>
+          <audio preload id='audwork'><source src='sound/work.wav' type="audio/wav"/></audio>
+          <audio preload id='audbreak'><source src='sound/break.wav' type="audio/wav"/></audio>          
+        </div>        
+        <script src="pomodorojs.js"></script>
+    </body>
+</html>
